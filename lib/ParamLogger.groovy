@@ -49,7 +49,11 @@ class ParamLogger {
             'useSTARthreshold', 'use-STARthreshold', 'cellFinderFdr', 'filterOutliers', 'madsReads',
             'madsPassingReads', 'madsMito', 'azimuthRef', 'cellTyping', 'seuratWorkflow', 'annData', 'scalePlex',
             'scalePlexLibStructure', 'scalePlexAssignmentMethod', 'scalePlexPercentFromTopTwo', 'scalePlexFCThreshold',
-			'scale-plex-FCThreshold', 'config_profile_name', 'custom_config_version', 'custom_config_base']
+			'scale-plex-FCThreshold', 
+            // Pluto / Google parameters imported from nf-core/configs for google & googlebatch profiles
+            'config_profile_name', 'custom_config_version', 'custom_config_base', 'config_profile_description', 'config_profile_contact', 
+            'config_profile_url', 'google_zone', 'google_bucket', 'google_debug', 'google_preemptible', 'project_id', 'location', 
+            'workdir_bucket', 'use_spot', 'boot_disk', 'workers_service_account', 'use_private_ip', 'custom_vpc', 'custom_subnet']
         def master_list_of_params = allowed_parameters
         allowed_parameters.each { str ->
             master_list_of_params += camelToKebab(str)}
