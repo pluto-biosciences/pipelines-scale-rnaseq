@@ -39,16 +39,17 @@ class ParamLogger {
         // PLEASE ADD NEW PARAMETERS TO THE allowed_parameters LIST
         // useSTARthreshold is a special case because how nextflow resolves it to kebab case seems incorrect
         // use-starthreshold is the correct kebab case
-        def allowed_parameters = ['samples', 'genome', 'runFolder', 'fastqDir', 'fastqSamplesheet', 'reporting',
-                                  'resultDir', 'outDir', 'bamOut', 'fastqOut', 'libStructure', 'merge', 'splitFastq',
-                                  'bclConvertParams', 'fastqc', 'starFeature', 'starMulti', 'starStrand', 'trimFastq',
-                                  'trimAdapt', 'scalePlexTrimAdapt', 'starTrimming', 'minUTC', 'min-UTC', 'cellFinder', 'fixedCells', 'UTC',
-                                  'taskMaxMemory', 'taskMaxCpus', 'taskMaxTime', 'starGroupSize', 'bcParserJobs', 'seurat', 'azimuth',
-                                  'compSamples', 'internalReport', 'help',  'topCellPercent', 'minCellRatio', 'expectedCells',
-                                  'useSTARthreshold', 'use-STARthreshold', 'cellFinderFdr', 'filterOutliers', 'madsReads',
-                                  'madsPassingReads', 'madsMito', 'azimuthRef', 'cellTyping', 'seuratWorkflow', 'annData', 'scalePlex',
-                                  'scalePlexLibStructure', 'scalePlexAssignmentMethod', 'scalePlexPercentFromTopTwo', 'scalePlexFCThreshold',
-				  'scale-plex-FCThreshold']
+        def allowed_parameters = [
+            'samples', 'genome', 'runFolder', 'fastqDir', 'fastqSamplesheet', 'reporting',
+            'resultDir', 'outDir', 'bamOut', 'fastqOut', 'libStructure', 'merge', 'splitFastq',
+            'bclConvertParams', 'fastqc', 'starFeature', 'starMulti', 'starStrand', 'trimFastq',
+            'trimAdapt', 'scalePlexTrimAdapt', 'starTrimming', 'minUTC', 'min-UTC', 'cellFinder', 'fixedCells', 'UTC',
+            'taskMaxMemory', 'taskMaxCpus', 'taskMaxTime', 'starGroupSize', 'bcParserJobs', 'seurat', 'azimuth',
+            'compSamples', 'internalReport', 'help',  'topCellPercent', 'minCellRatio', 'expectedCells',
+            'useSTARthreshold', 'use-STARthreshold', 'cellFinderFdr', 'filterOutliers', 'madsReads',
+            'madsPassingReads', 'madsMito', 'azimuthRef', 'cellTyping', 'seuratWorkflow', 'annData', 'scalePlex',
+            'scalePlexLibStructure', 'scalePlexAssignmentMethod', 'scalePlexPercentFromTopTwo', 'scalePlexFCThreshold',
+			'scale-plex-FCThreshold', 'config_profile_name', 'custom_config_version', 'custom_config_base']
         def master_list_of_params = allowed_parameters
         allowed_parameters.each { str ->
             master_list_of_params += camelToKebab(str)}
